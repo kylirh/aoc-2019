@@ -19,7 +19,7 @@ import fs from 'fs';
     const module = await import(modulePath);
     const result = module.default(data);
     if (result) {
-      console.log(result);
+      console.log(`\r\n====================\r\n${result}\r\n====================\r\n`);
     }
   } catch (e) {
     console.error(e);

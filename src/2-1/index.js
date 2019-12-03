@@ -29,13 +29,16 @@ export const run = (input) => {
   return program;
 };
 
-export const setup = (input) => {
+export const setup = (input, noun, verb) => {
   const program = [...input];
-  program[1] = 12;
-  program[2] = 2;
+  program[1] = noun;
+  program[2] = verb;
   return program;
 };
 
 export default (data) => {
-  const program = data.split(',').map(parseInt(x, 10));
+  const input = data.split(',').map((x) => parseInt(x, 10));
+  const program = setup(input, 12, 2);
+  const output = run(program);
+  return output[0];
 };

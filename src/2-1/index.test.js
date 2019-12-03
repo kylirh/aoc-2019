@@ -35,7 +35,7 @@ describe('day 2, challenge 1', () => {
   it('sets up the program correctly', () => {
     // replace position 1 with the value 12 and replace position 2 with the value 2
     const program = [1, 0, 0, 0, 99];
-    const output = setup(program);
+    const output = setup(program, 12, 2);
     expect(output).to.eql([1, 12, 2, 0, 99]);
   });
 });
