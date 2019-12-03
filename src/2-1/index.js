@@ -3,7 +3,7 @@ export const run = (input) => {
   const MULTIPLY = 2;
   const STOP = 99;
 
-  let program = [...input];
+  const program = [...input];
   let position = 0;
   let opcode = program[position];
 
@@ -26,6 +26,13 @@ export const run = (input) => {
     opcode = program[position];
   }
 
+  return program;
+};
+
+export const setup = (input) => {
+  const program = [...input];
+  program[1] = 12;
+  program[2] = 2;
   return program;
 };
 

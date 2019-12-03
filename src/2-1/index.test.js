@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { run } from './index.js';
+import { run, setup } from './index.js';
 
 describe('day 2, challenge 1', () => {
   it('first test case', () => {
@@ -30,5 +30,12 @@ describe('day 2, challenge 1', () => {
     const program = [1, 1, 1, 4, 99, 5, 6, 0, 99];
     const output = run(program);
     expect(output).to.eql([30, 1, 1, 4, 2, 5, 6, 0, 99]);
+  });
+
+  it('sets up the program correctly', () => {
+    // replace position 1 with the value 12 and replace position 2 with the value 2
+    const program = [1, 0, 0, 0, 99];
+    const output = setup(program);
+    expect(output).to.eql([1, 12, 2, 0, 99]);
   });
 });
